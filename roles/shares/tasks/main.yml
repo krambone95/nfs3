@@ -1,0 +1,7 @@
+name: configure exports file for server
+template:
+  src: server_shares/{{ ansible_facts['ansible_hostname'] }}.j2
+  dest: /etc/exports
+  owner: root
+  group: root
+  mode: '0600'
